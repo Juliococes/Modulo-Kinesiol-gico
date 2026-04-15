@@ -1,0 +1,6 @@
+{
+  "name": "KineTrack Clinical System",
+  "description": "A specialized clinical module for kinesiologists to evaluate, track, and manage patient physical condition through visual body mapping and historical session logging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
