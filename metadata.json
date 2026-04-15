@@ -1,6 +1,6 @@
 {
-  "name": "KineTrack Clinical System",
-  "description": "A specialized clinical module for kinesiologists to evaluate, track, and manage patient physical condition through visual body mapping and historical session logging.",
+  "name": "SurGira Kinesis Pro",
+  "description": "Módulo clínico especializado para kinesiología con mapa corporal anatómico, seguimiento de sesiones y sincronización de datos.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }

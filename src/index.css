@@ -1,16 +1,97 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
-  --font-sans: 'Helvetica Neue', Arial, sans-serif;
-  --color-primary: #2563eb;
-  --color-text-main: #1e293b;
-  --color-text-muted: #64748b;
-  --color-border-theme: #e2e8f0;
-  --color-accent-red: #ef4444;
-  --color-accent-green: #22c55e;
-  --color-accent-orange: #f59e0b;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-background: #0A0A0A;
+  --color-foreground: #FFFFFF;
+  
+  --color-primary: #167272;
+  --color-primary-foreground: #FFFFFF;
+  
+  --color-secondary: #0F5858;
+  --color-secondary-foreground: #FFFFFF;
+  
+  --color-muted: #151515;
+  --color-muted-foreground: #888888;
+  
+  --color-accent: #167272;
+  --color-accent-foreground: #FFFFFF;
+  
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #FFFFFF;
+  
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-input: rgba(255, 255, 255, 0.05);
+  --color-ring: #167272;
+  
+  --radius-xl: 0.75rem;
+  --radius-lg: 0.5rem;
+  --radius-md: 0.375rem;
+  --radius-sm: 0.25rem;
 }
 
-body {
-  @apply bg-[#f1f5f9] text-[#1e293b] antialiased;
+@layer base {
+  @font-face {
+    font-family: 'Geist';
+    src: url('https://cdn.jsdelivr.net/gh/vercel/geist-font@main/fonts/geist-sans/Geist-Variable.woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --background: #0A0A0A;
+    --foreground: #FFFFFF;
+    --card: #121212;
+    --card-foreground: #FFFFFF;
+    --popover: #121212;
+    --popover-foreground: #FFFFFF;
+    --primary: #167272;
+    --primary-foreground: #FFFFFF;
+    --secondary: #0F5858;
+    --secondary-foreground: #FFFFFF;
+    --muted: #151515;
+    --muted-foreground: #888888;
+    --accent: #167272;
+    --accent-foreground: #FFFFFF;
+    --destructive: #EF4444;
+    --destructive-foreground: #FFFFFF;
+    --border: rgba(255, 255, 255, 0.1);
+    --input: rgba(255, 255, 255, 0.05);
+    --ring: #167272;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: #0A0A0A;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: white;
+    @apply antialiased selection:bg-primary/30 min-h-screen font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-semibold tracking-tight;
+  }
+
+  label {
+    @apply text-white/70 text-sm font-medium;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+  }
 }
